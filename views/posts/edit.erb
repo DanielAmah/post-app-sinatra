@@ -1,0 +1,26 @@
+<div class="center-align">
+<h4> Edit Post </h4>
+<br/>
+<form action="/posts/<%= @post.id %>" method="post" class="col s12">
+ <div class="row">
+ <div class="input-field col s6 offset-s3">
+  <input type="hidden" name="_method" value="put" />
+  <label for="post_title">Title:</label>
+   <br>
+  </div>
+ </div>
+  <div class="row">
+ <div class="input-field col s6 offset-s3">
+  <input id="post_title" class="form-control" name="post[title]" type="text" value="<%=h @post.title %>" />
+  </div>
+  </div>
+  <div class="row">
+ <div class="input-field col s6 offset-s3">
+  <label for="post_body">Body:</label>
+  <br>
+  <textarea id="post_body" name="post[body]" class="materialize-textarea" rows="5"><%=h @post.body %></textarea>
+ </div>
+ </div>
+  <button type="submit" class="btn waves-effect waves-light red">Update<i class="material-icons right">send</i></button>
+</form>
+</div>

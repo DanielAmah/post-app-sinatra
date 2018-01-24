@@ -1,0 +1,19 @@
+<div class="center-align">
+<h4>Create Post</h4>
+<br/>
+<form action="/posts" method="post"role="form" class="col s12">
+     <div class="row">
+ <div class="input-field col s6 offset-s3">
+   <label for="post_title">Title:</label>
+   <input id="post_title" class="validate" name="post[title]" type="text" value="<%= @post.title %>" style="width=90%"/>
+ </div>
+ </div>
+   <div class="row">
+ <div class="input-field col s6 offset-s3">
+   <label for="post_body">Body:</label>
+   <textarea id="post_body" name="post[body]" class="materialize-textarea" rows="10"><%= @post.body %></textarea>
+ </div>
+ </div>
+ <button type="submit" class="btn waves-effect waves-light">Submit<i class="material-icons right">send</i></button>
+</form>
+</div>
