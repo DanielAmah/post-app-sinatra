@@ -2,5 +2,6 @@
 <h4><%=@post.title%></h4>
 <p><%=@post.body%></p>
 <br>
-<a href="/posts/<%= @post.id %>/edit"> Edit post</a>
+<a href="/posts/<%= @post.id %>/edit"> Edit Post</a>
+<a href="/posts/delete/<%= @post.id %>">Delete Post</a>
 </div>

@@ -59,9 +59,20 @@ get "/posts/:id/edit" do
   erb :"posts/edit"
 end
 
+get "/posts/delete/:id" do
+  @post = Post.find(params[:id])
+  @title = "Delete Form"
+  erb :"posts/delete"
+end
+
 put "/posts/:id" do
   @post = Post.find(params[:id])
   @post.update(params[:post])
   redirect "/posts/#{@post.id}"
 
+end
+
+delete "/posts/:id" do
+  @post = Post.find(params[:id]).destroy
+  redirect to("/")
 end
